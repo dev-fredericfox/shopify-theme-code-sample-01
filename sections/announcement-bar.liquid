@@ -6,7 +6,7 @@
           {%- if block.settings.link != blank -%}
             <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
           {%- endif -%}
-              <p class="announcement-bar__message h5">
+              <p class="announcement-bar__message {{ block.settings.font_color }} h5">
                 {{ block.settings.text | escape }}
                 {%- if block.settings.link != blank -%}
                   {% render 'icon-arrow' %}
@@ -61,6 +61,30 @@
             }
           ],
           "default": "accent-1",
+          "label": "t:sections.all.colors.label"
+        },
+        {
+          "type": "select",
+          "id": "font_color",
+          "options": [
+            {
+              "value": "color-text",
+              "label": "t:sections.all.colors.colors_text.label"
+            },
+            {
+              "value": "color-text-2",
+              "label": "t:sections.all.colors.colors_text_2.label"
+            },
+            {
+              "value": "color-text-success",
+              "label": "t:sections.all.colors.colors_text_success.label"
+            },
+            {
+              "value": "color-text-inverse",
+              "label": "t:sections.all.colors.inverse.label"
+            }
+          ],
+          "default": "color-text-inverse",
           "label": "t:sections.all.colors.label"
         },
         {
