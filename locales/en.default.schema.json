@@ -116,6 +116,18 @@
           "label": "Text",
           "info": "Used as foreground color on background colors."
         },
+        "colors_text_2": {
+          "label": "Text",
+          "info": "Used as secondary color on background colors."
+        },
+        "colors_text_success": {
+          "label": "Text",
+          "info": "Used as success color."
+        },
+        "colors_text_invert": {
+          "label": "Text",
+          "info": "Used as inverted color on inverted background colors."
+        },
         "colors_outline_button_labels": {
           "label": "Outline button",
           "info": "Also used for text links."

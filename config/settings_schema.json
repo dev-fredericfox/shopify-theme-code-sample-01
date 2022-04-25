@@ -58,8 +58,22 @@
       {
         "type": "color",
         "id": "colors_text_2",
-        "default": "#121212",
-        "label": "t:settings_schema.colors.settings.colors_text.label",
+        "default": "#383838",
+        "label": "t:settings_schema.colors.settings.colors_text_2.label",
+        "info": "t:settings_schema.colors.settings.colors_text.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_text_success",
+        "default": "#25A525",
+        "label": "t:settings_schema.colors.settings.colors_text_success.label",
+        "info": "t:settings_schema.colors.settings.colors_text.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_text_invert",
+        "default": "#ffffff",
+        "label": "t:settings_schema.colors.settings.colors_text_invert.label",
         "info": "t:settings_schema.colors.settings.colors_text.info"
       },
       {
