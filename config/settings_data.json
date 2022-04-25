@@ -11,7 +11,7 @@
       "colors_outline_button_labels": "#121212",
       "colors_background_1": "#ffffff",
       "gradient_background_1": "",
-      "colors_background_2": "#f3f3f3",
+      "colors_background_2": "#5f5f5f",
       "gradient_background_2": "",
       "type_header_font": "assistant_n4",
       "heading_scale": 100,
@@ -105,8 +105,8 @@
             "announcement-bar-0": {
               "type": "announcement",
               "settings": {
-                "text": "Welcome to our store",
-                "color_scheme": "background-1",
+                "text": "HEUTE VERSANDKOSTENFREI",
+                "color_scheme": "background-2",
                 "link": ""
               }
             }
