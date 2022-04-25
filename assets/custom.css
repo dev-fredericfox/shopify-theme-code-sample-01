@@ -7,3 +7,6 @@
 .color-text-inverse {
   color: var(--color-text-inverse);
 }
+.color-background-3 {
+  background-color: var(--color-base-background-3);
+}

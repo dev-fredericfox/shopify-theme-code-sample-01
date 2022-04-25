@@ -104,6 +104,12 @@
         "id": "gradient_background_2",
         "type": "color_background",
         "label": "t:settings_schema.colors.settings.gradient_background_2.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_background_3",
+        "default": "#5f5f5f",
+        "label": "t:settings_schema.colors.settings.colors_background_2.label"
       }
     ]
   },
@@ -524,6 +530,10 @@
           {
             "value": "background-2",
             "label": "t:sections.all.colors.background_2.label"
+          },
+          {
+            "value": "background-3",
+            "label": "t:sections.all.colors.background_3.label"
           },
           {
             "value": "inverse",
