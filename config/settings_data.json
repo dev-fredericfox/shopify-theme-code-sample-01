@@ -8,7 +8,7 @@
     "colors_text": "#121212",
     "colors_text_2": "#383838",
     "colors_text_success": "#25A525",
-    "colors_text_invert": "#ffffff",
+    "colors_text_inverse": "#ffffff",
     "colors_outline_button_labels": "#121212",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
