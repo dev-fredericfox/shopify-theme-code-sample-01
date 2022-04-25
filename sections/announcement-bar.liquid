@@ -6,7 +6,7 @@
           {%- if block.settings.link != blank -%}
             <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
           {%- endif -%}
-              <p class="announcement-bar__message {{ block.settings.color_font }} h5">
+              <p class="announcement-bar__message h5">
                 {{ block.settings.text | escape }}
                 {%- if block.settings.link != blank -%}
                   {% render 'icon-arrow' %}
@@ -40,26 +40,6 @@
           "id": "color_scheme",
           "options": [
             {
-              "value": "font-1",
-              "label": "t:sections.all.colors.accent_1.label"
-            },
-            {
-              "value": "font-2",
-              "label": "t:sections.all.colors.accent_2.label"
-            },
-            {
-              "value": "font-inverse",
-              "label": "t:sections.all.colors.inverse.label"
-            }
-          ],
-          "default": "accent-1",
-          "label": "t:sections.all.colors.label"
-        },
-        {
-          "type": "select",
-          "id": "color_font",
-          "options": [
-            {
               "value": "accent-1",
               "label": "t:sections.all.colors.accent_1.label"
             },
@@ -80,7 +60,7 @@
               "label": "t:sections.all.colors.inverse.label"
             }
           ],
-          "default": "accent-2",
+          "default": "accent-1",
           "label": "t:sections.all.colors.label"
         },
         {
