@@ -10,3 +10,19 @@
 .color-background-3 {
   background-color: var(--color-base-background-3);
 }
+
+.product__info-container {
+  top: 287px;
+  left: 1051px;
+  width: 475px;
+  height: 275px;
+  padding: 18px 23px 25px 28px;
+  box-shadow: 0px 3px 20px #00000029;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+}
+
+.h1__product {
+  font-size: 25px;
+  font: normal normal 600 25px/30px;
+}
