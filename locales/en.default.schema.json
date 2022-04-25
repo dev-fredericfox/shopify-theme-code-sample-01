@@ -117,15 +117,15 @@
           "info": "Used as foreground color on background colors."
         },
         "colors_text_2": {
-          "label": "Text",
+          "label": "Text 2",
           "info": "Used as secondary color on background colors."
         },
         "colors_text_success": {
-          "label": "Text",
+          "label": "Text Success",
           "info": "Used as success color."
         },
-        "colors_text_invert": {
-          "label": "Text",
+        "colors_text_inverse": {
+          "label": "Text Inverse",
           "info": "Used as inverted color on inverted background colors."
         },
         "colors_outline_button_labels": {
