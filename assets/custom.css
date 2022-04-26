@@ -26,16 +26,28 @@
   border-radius: 3px;
 }
 
+.radius-5 {
+  border-radius: 5px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .h-22 {
   height: 22px;
+}
+
+.h-23 {
+  height: 23px;
 }
 
 .h-52 {
   height: 52px;
 }
 
-.mr-10 {
-  margin-right: 10px;
+.max-h-100 {
+  max-height: 100px;
 }
 
 .border-0 {
@@ -46,8 +58,24 @@
   text-align: center;
 }
 
-.w-100 {
+.w-480 {
+  width:480px;
+}
+
+.w-full {
   width: 100%;
+}
+
+.w-23 {
+  width: 23px;
+}
+
+.max-w-100 {
+  max-width: 100px;
+}
+
+.pb-23 {
+  padding-bottom: 23px;
 }
 
 .text-xs {
@@ -115,12 +143,58 @@
   margin-bottom: auto;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
 .flex {
-  display: flex!important;
+  display: flex !important;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+
+.grid-cols-1 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.content-center {
+  align-content: center
 }
 
 .basis-full {
@@ -152,6 +226,11 @@
 
 .text-success {
   color: var(--color-text-success);
+}
+
+.desktop-450 {
+  width: 450px;
+  height: 450px;
 }
 
 @media all and (max-width: 767px) {

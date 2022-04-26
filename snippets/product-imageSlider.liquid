@@ -1,0 +1,52 @@
+{% assign images = product.media | where: "media_type", "image" %}
+<div class="flex">
+    <div class="mr-20 grid-cols-1 gap-15 content-center pb-23">
+        {% for image in images %}
+            {% if forloop.index == 1 %}
+                {% continue %}
+            {% else %}
+                <div class="radius-3 overflow-hidden max-w-100 max-h-100">
+                    <img src="{{ image | image_url: width: 100}}" height="100" width="100" loading="lazy">
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div class="w-480">
+          <div id="mainImageWrapper" class="radius-5 overflow-hidden">
+            <img  id="mainImage" src="{{ images[0] | image_url: width: 480 }}" height="480" width="480" loading="lazy">
+        </div>
+        <div class="flex w-480 h-23">
+            <div id="image-backwards" class="ml-auto w-23"><</div>
+            <div id="image-forwards" class="mr-auto w-23">></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+let imageArray = []
+{% for image in images %}
+    imageArray.push('<img id="mainImage" src="{{ image | image_url: width: 480}}" height="480" width="480" loading="lazy">')
+{% endfor %}
+let currentImageIndex = 0
+const mainImage = document.querySelector('#mainImage')
+const mainImageWrapper = document.querySelector('#mainImageWrapper')
+const imageBackwards = document.querySelector('#image-backwards').addEventListener("click", previousImage)
+const imageForwards = document.querySelector('#image-forwards').addEventListener("click", nextImage)
+function previousImage() {
+    if (currentImageIndex > 0) {
+        currentImageIndex--
+    } else {
+        currentImageIndex = (imageArray.length-1)
+    }
+    mainImageWrapper.innerHTML = imageArray[currentImageIndex]
+}
+function nextImage() {
+    if (currentImageIndex < (imageArray.length-1)) {
+        currentImageIndex++
+    } else {
+        currentImageIndex = 0
+    }
+    mainImageWrapper.innerHTML = imageArray[currentImageIndex]
+}
+</script>
