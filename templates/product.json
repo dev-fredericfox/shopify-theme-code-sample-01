@@ -23,7 +23,8 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false
+            "show_dynamic_checkout": false,
+            "color_scheme": "background-2"
           }
         }
       },
