@@ -201,12 +201,12 @@
           {%- when '@app' -%}
             {% render block %}
           {%- when 'text' -%}
-            <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
+            <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle text-lg font-medium{% endif %}" {{ block.shopify_attributes }}>
               {{- block.settings.text -}}
             </p>
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
-              <h1 class="h1__product">{{ product.title | escape }}</h1>
+              <h1 class="text-xl font-bold">{{ product.title | escape }}</h1>
               <a href="{{ product.url }}" class="product__title">
                 <h2 class="h1">
                   {{ product.title | escape }}
@@ -214,19 +214,20 @@
               </a>
             </div>
           {%- when 'price' -%}
-            <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+            <div class="no-js-hidden flex" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+              {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+                <div class="caption rte text-xs">
+                  {%- if shop.taxes_included -%}
+                    {{ 'products.product.include_taxes' | t }}
+                  {%- endif -%}
+                  {%- if shop.shipping_policy.body != blank -%}
+                    {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
             </div>
-            {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-              <div class="product__tax caption rte">
-                {%- if shop.taxes_included -%}
-                  {{ 'products.product.include_taxes' | t }}
-                {%- endif -%}
-                {%- if shop.shipping_policy.body != blank -%}
-                  {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                {%- endif -%}
-              </div>
-            {%- endif -%}
+         
             <div {{ block.shopify_attributes }}>
               {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
               {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
@@ -422,10 +423,10 @@
                     <button
                       type="submit"
                       name="add"
-                      class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                      class="product-form__submit radius-3 h-52 border-0 text-center button--full-width button-color-{{ block.settings.color_scheme }}"
                     {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
-                        <span>
+                        <span class="w-100 my-auto text-base">
                           {%- if product.selected_or_first_available_variant.available -%}
                             {{ 'products.product.add_to_cart' | t }}
                           {%- else -%}
@@ -712,6 +713,26 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "background-1",
+              "label": "t:sections.all.colors.background_1.label"
+            },
+            {
+              "value": "background-2",
+              "label": "t:sections.all.colors.background_2.label"
+            },
+            {
+              "value": "background-3",
+              "label": "t:sections.all.colors.background_3.label"
+            }
+          ],
+          "default": "background-2",
+          "label": "t:sections.all.colors.label"
         }
       ]
     },
