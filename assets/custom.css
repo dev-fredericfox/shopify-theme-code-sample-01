@@ -105,7 +105,7 @@
 
 .button-color-background-2 {
   color: var(--color-text-inverse);
-  background-color: var(--color-base-background-2);
+  background-color: rgb(var(--color-base-background-2));
 }
 
 .button-color-background-3 {
