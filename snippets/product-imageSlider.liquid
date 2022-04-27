@@ -18,13 +18,17 @@
         <div id="mainImageWrapper" class="radius-5 overflow-hidden max-h-480 mob-max-h-350">
             <img  id="mainImage" src="{{ images[0] | image_url: width: 480 }}" height="100%" width="100%" loading="lazy">
         </div>
-        <div class="flex w-480 h-23">
+        <div class="flex w-480 h-23  hidden-mobile">
             <div id="image-backwards" class="ml-auto w-23 hidden-mobile"><</div>
             <div id="image-forwards" class="mr-auto w-23 hidden-mobile">></div>
         </div>
-        <div class="flex mob-flex-row mob-justify-center">
+        <div class="flex mob-flex-row mob-justify-center my-10">
             {% for image in images %}
-                <div class="h-10 w-10 radius-full color-background-3 hidden-desktop"><span></span></div>
+                {% if forloop.index == 1 %}
+                    <div id="bubble-{{forloop.index}}" class="h-10 w-10 mr-5 radius-full bubble-active hidden-desktop"><span></span></div>    
+                {% else %}
+                    <div id="bubble-{{forloop.index}}" class="h-10 w-10 mr-5 radius-full bubble-inactive hidden-desktop"><span></span></div>
+                 {% endif %}
             {% endfor %}
         </div>
     </div>
@@ -67,6 +71,12 @@ function previousImage() {
         mobImageIndexPlusOne = (imageArray.length-1)
     }
     leftMobImageWrapper.innerHTML =  imageArray[mobImageIndexPlusOne]
+    const currentBubble = document.getElementById("bubble-"+(mobImageIndexMinusOne+1))
+    const nextBubble = document.getElementById("bubble-"+(currentImageIndex+1))
+    currentBubble.classList.remove("bubble-active")
+    currentBubble.classList.add("bubble-inactive")
+    nextBubble.classList.remove("bubble-active")
+    nextBubble.classList.add("bubble-active")
 }
 function nextImage() {
     if (currentImageIndex < (imageArray.length-1)) {
@@ -87,6 +97,12 @@ function nextImage() {
         mobImageIndexPlusOne = 0
     }
      leftMobImageWrapper.innerHTML =  imageArray[mobImageIndexPlusOne]
+     const currentBubble = document.getElementById("bubble-"+(mobImageIndexPlusOne+1))
+     const nextBubble = document.getElementById("bubble-"+(currentImageIndex+1))
+     currentBubble.classList.remove("bubble-active")
+     currentBubble.classList.add("bubble-inactive")
+     nextBubble.classList.remove("bubble-active")
+     nextBubble.classList.add("bubble-active")
 }
 
 
