@@ -3,7 +3,7 @@
 }
 
 .color-text-3 {
-  color: var(--color-text-2);
+  color: rgb(var(--color-text-3));
 }
 .color-text-success {
   color: var(--color-text-success);
@@ -25,6 +25,9 @@
   border: 1px solid #d5d5d5;
   border-radius: 5px;
 }
+.border-1 {
+  border-width: 1px;
+}
 
 .radius-3 {
   border-radius: 3px;
@@ -32,6 +35,10 @@
 
 .radius-5 {
   border-radius: 5px;
+}
+
+.box-shadow-3-20 {
+  box-shadow: 0 3px 20px #00000029
 }
 
 .overflow-hidden {
@@ -52,6 +59,10 @@
 
 .h-57 {
   height: 57px;
+}
+
+.h-275 {
+  height: 275px;
 }
 
 .max-h-100 {
@@ -90,8 +101,28 @@
   max-width: 100px;
 }
 
+.max-w-475 {
+  max-width: 475px;
+}
+
+.pt-18 {
+  padding-top: 18px;
+}
+
 .pb-23 {
   padding-bottom: 23px;
+}
+
+.pb-25 {
+  padding-bottom: 25px;
+}
+
+.pl-28 {
+  padding-left: 28px;
+}
+
+.pr-23 {
+  padding-left: 23px;
 }
 
 .text-xs {
@@ -181,6 +212,10 @@
 
 .mb-15 {
   margin-bottom: 15px;
+}
+
+.ml-50 {
+  padding-left: 50px
 }
 
 .flex {
