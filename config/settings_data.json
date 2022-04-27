@@ -107,8 +107,8 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
-              "color_scheme": "background-1",
+              "text": "HEUTE VERSANDKOSTENFREI",
+              "color_scheme": "background-3",
               "font_color": "color-text-inverse",
               "link": ""
             }
