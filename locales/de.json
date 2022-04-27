@@ -103,6 +103,7 @@
   "products": {
     "product": {
       "add_to_cart": "In den Warenkorb legen",
+      "in_stock_shipping": "Auf Lager, in 2-3 Tagen bei dir",
       "description": "Beschreibung",
       "on_sale": "Sale",
       "product_variants": "Produktvarianten",

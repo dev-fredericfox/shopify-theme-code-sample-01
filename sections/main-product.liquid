@@ -69,11 +69,11 @@
                   {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
                   <span class="dot-available mr-10 mt-1">
                   </span>
-                    <span class="text-sm font-medium text-success">Auf Lager, in 2-3 Tagen bei dir</spam>
+                    <span class="text-sm font-medium text-success">{{ 'products.product.in_stock_shipping' | t }}</span>
                   {% else %}
                   <span class="dot-oos mr-10">
                   </span>
-                  <span class="text-sm font-medium">Ausverkauft</spam>
+                  <span class="text-sm font-medium">{{ 'products.product.sold_out' | t }}</span>
                   {% endif %}
                   </div>
               {%- endif -%}
