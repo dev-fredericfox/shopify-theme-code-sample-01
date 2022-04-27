@@ -37,8 +37,8 @@
   {% render 'product-imageSlider' %}
   
 
-    <div class="max-w-475 ml-50 h-275 {% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
-      <div id="ProductInfo-{{ section.id }}" class="radius-5 border-1 box-shadow-3-20 pt-18 pb-23 pl-28 pr-23">
+    <div class="ml-50 mob-mx-20 {% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
+      <div id="ProductInfo-{{ section.id }}" class="radius-5 max-w-475 min-h-275 border-1-solid box-shadow-3-20 pt-18 pb-23 pl-28 pr-23 ">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {%- for block in section.blocks -%}
@@ -50,16 +50,11 @@
               {{- block.settings.text -}}
             </p>
           {%- when 'title' -%}
-            <div class="product__title" {{ block.shopify_attributes }}>
-              <h1 class="text-xl font-bold">{{ product.title | escape }}</h1>
-              <a href="{{ product.url }}" class="product__title">
-                <h2 class="h1">
-                  {{ product.title | escape }}
-                </h2>
-              </a>
+            <div class="" {{ block.shopify_attributes }}>
+              <h1 class="text-xl font-bold mt-0 mb-0">{{ product.title | escape }}</h1>
             </div>
           {%- when 'price' -%}
-            <div class="no-js-hidden flex flex-wrap" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+            <div class="no-js-hidden flex flex-wrap mt-20" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
               {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="text-xs h-22 mt-auto">
@@ -70,9 +65,9 @@
                     {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                   {%- endif -%}
                 </div>
-                <div class="basis-full flex">
+                <div class="basis-full flex mt-18">
                   {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
-                  <span class="dot-available mr-10">
+                  <span class="dot-available mr-10 mt-1">
                   </span>
                     <span class="text-sm font-medium text-success">Auf Lager, in 2-3 Tagen bei dir</spam>
                   {% else %}
@@ -275,7 +270,7 @@
 
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
-                  <div class="product-form__buttons">
+                  <div class="product-form__buttons mt-37">
                     <button
                       type="submit"
                       name="add"
