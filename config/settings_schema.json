@@ -64,6 +64,13 @@
       },
       {
         "type": "color",
+        "id": "colors_text_3",
+        "default": "#383838",
+        "label": "t:settings_schema.colors.settings.colors_text_3.label",
+        "info": "t:settings_schema.colors.settings.colors_text_3.info"
+      },
+      {
+        "type": "color",
         "id": "colors_text_success",
         "default": "#25A525",
         "label": "t:settings_schema.colors.settings.colors_text_success.label",

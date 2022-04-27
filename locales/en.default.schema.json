@@ -120,6 +120,10 @@
           "label": "Text 2",
           "info": "Used as secondary color on background colors."
         },
+        "colors_text_3": {
+          "label": "Text 3",
+          "info": "Used as tertiary color on background colors."
+        },
         "colors_text_success": {
           "label": "Text Success",
           "info": "Used as success color."

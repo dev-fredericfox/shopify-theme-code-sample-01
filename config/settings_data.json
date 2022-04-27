@@ -7,6 +7,7 @@
     "gradient_accent_2": "",
     "colors_text": "#121212",
     "colors_text_2": "#1f47ff",
+    "colors_text_3": "#383838",
     "colors_text_success": "#25A525",
     "colors_text_inverse": "#ffffff",
     "colors_outline_button_labels": "#121212",
@@ -107,8 +108,8 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
-              "color_scheme": "background-1",
+              "text": "HEUTE VERSANDKOSTENFREI",
+              "color_scheme": "background-3",
               "font_color": "color-text-inverse",
               "link": ""
             }
@@ -130,7 +131,7 @@
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
           "show_line_separator": true,
-          "enable_sticky_header": true,
+          "enable_sticky_header": false,
           "margin_bottom": 0
         }
       },
